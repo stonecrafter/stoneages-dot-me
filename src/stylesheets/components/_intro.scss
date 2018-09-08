@@ -23,8 +23,14 @@
     transform: translate(-50%, -50%);
     text-align: center;
 
-    h2 {
-      animation-delay: $typing-animation-duration;
+    h1 {
+      cursor: default;
+
+      span {
+        &:hover {
+          color: lighten($color-primary-dark, 10%);
+        }
+      }
     }
   }
 }
