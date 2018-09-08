@@ -1,0 +1,30 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: $color-primary-dark;
+  color: $color-primary;
+
+  a {
+    color: $color-primary;
+
+    &:hover,
+    &:active {
+      color: lighten($color-primary, 25%);
+    }
+  }
+
+  &__container {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+    margin: auto;
+  }
+
+  &__nav {
+    a {
+      margin-left: 2rem;
+    }
+  }
+}

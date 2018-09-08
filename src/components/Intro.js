@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import * as PIXI from 'pixi.js';
 
 import mario from '../images/icons/mario.svg';
@@ -13,6 +14,9 @@ const Application = PIXI.Application,
 // thus there is a 25px offset in all 4 directions from the anchor point
 const SPRITE_OFFSET = 25;
 
+// The header is 50px, so we will consider that to be the top border of the canvas
+const HEADER_HEIGHT_OFFSET = 50;
+
 /**
  * Intro section: animated interactive fun using pixi.js
  */
@@ -21,7 +25,11 @@ class Intro extends Component {
     super(props);
     this.pixiContainer = null;
     this.spriteList = [];
-    this.app = new Application({ width: window.innerWidth, height: window.innerHeight, backgroundColor: 0xede68a });
+    this.app = new Application({
+      width: document.documentElement.clientWidth,
+      height: document.documentElement.clientHeight,
+      backgroundColor: 0xede68a
+    });
     this.canvasHeight = this.app.view.height;
     this.canvasWidth = this.app.view.width;
   }
@@ -35,6 +43,9 @@ class Intro extends Component {
     if (this.pixiContainer && this.pixiContainer.children.length <= 0) {
       this.pixiContainer.appendChild(this.app.view);
       this.setup();
+      // Update the viewport size after component has rendered in case we need to adjust for scrollbar
+      // Don't think this can be done before rendering
+      this.onViewportResize();
     }
   };
 
@@ -44,7 +55,8 @@ class Intro extends Component {
   onViewportResize = () => {
     // Perform pixi resize
     this.app.renderer.autoResize = true;
-    this.app.renderer.resize(window.innerWidth, window.innerHeight);
+    // Height and width of viewport not including any scroll bars
+    this.app.renderer.resize(document.documentElement.clientWidth, document.documentElement.clientHeight);
 
     // Update references
     this.canvasHeight = this.app.view.height;
@@ -69,7 +81,16 @@ class Intro extends Component {
    * Render react element
    */
   render() {
-    return <div ref={this.updatePixiContainer} />;
+    return (
+      <div id="top" className="intro">
+        <div className="intro__canvas" ref={this.updatePixiContainer}></div>
+        <div className="intro__title">
+          <h1>kirien eyma</h1>
+          <h2>front end developer</h2>
+        </div>
+        <AnchorLink offset="50" href="#about" className="intro__arrow"></AnchorLink>
+      </div> 
+    );
   }
 
   //////////
@@ -116,8 +137,10 @@ class Intro extends Component {
     sprite.width = 50;
     
     // Starting position
-    sprite.x = Math.random() * (this.canvasWidth - sprite.width);
-    sprite.y = Math.random() * (this.canvasHeight - sprite.height);
+    const minX = sprite.width;
+    const minY = sprite.height + HEADER_HEIGHT_OFFSET;
+    sprite.x = Math.random() * (this.canvasWidth - minX) + minX;
+    sprite.y = Math.random() * (this.canvasHeight - minY) + minY;
     
     // Starting rotation, anchored in the center of the image
     sprite.anchor.set(0.5, 0.5);
@@ -161,7 +184,7 @@ class Intro extends Component {
       // Don't do this while drag is still occurring
       const isOffLeft = globalPosition.x + SPRITE_OFFSET <= 0;
       const isOffRight = globalPosition.x - SPRITE_OFFSET >= this.canvasWidth;
-      const isOffTop = globalPosition.y + SPRITE_OFFSET <= 0;
+      const isOffTop = globalPosition.y + SPRITE_OFFSET <= HEADER_HEIGHT_OFFSET;
       const isOffBottom = globalPosition.y - SPRITE_OFFSET >= this.canvasHeight;
 
       if (!sprite.dragging && (isOffLeft || isOffRight || isOffTop || isOffBottom)) {
@@ -175,7 +198,7 @@ class Intro extends Component {
       ) {
         sprite.vx = -(sprite.vx);
       } else if (
-        (globalPosition.y - SPRITE_OFFSET) + sprite.vy <= 0 ||
+        (globalPosition.y - SPRITE_OFFSET) + sprite.vy <= HEADER_HEIGHT_OFFSET ||
         (globalPosition.y + SPRITE_OFFSET) + sprite.vy >= this.canvasHeight
       ) {
         sprite.vy = -(sprite.vy);

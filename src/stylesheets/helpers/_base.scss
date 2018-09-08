@@ -9,8 +9,9 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: $m-size;
+  color: $color-primary-dark;
 }
 
 textarea,
@@ -18,4 +19,29 @@ input,
 button,
 select {
   font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: $color-primary-dark;
+
+  &:hover,
+  &:active {
+    color: lighten($color-primary-dark, 25%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Kaushan Script', cursive;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
