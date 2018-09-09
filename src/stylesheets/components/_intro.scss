@@ -1,4 +1,12 @@
 .intro {
+  background: url('../images/hero.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: $color-primary-light;
+  background-blend-mode: difference;
+
+  width: 100vw;
+  height: 100vh;
+
   &__arrow {
     background: url('../images/icons/downArrow.svg');
     background-size: 5rem 5rem;
@@ -25,12 +33,17 @@
 
     h1 {
       cursor: default;
+      letter-spacing: 2rem;
 
       span {
         &:hover {
           color: lighten($color-primary-dark, 10%);
         }
       }
+    }
+
+    h2 {
+      letter-spacing: 1rem;
     }
   }
 }
