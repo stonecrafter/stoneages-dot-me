@@ -1,3 +1,64 @@
 .about {
-  height: 1000px;
+  height: 1400px;
+  background: linear-gradient(180deg, $color-background-primary 0%, $color-background-secondary 100%);
+  text-align: center;
+
+  > * {
+    margin: auto;
+    width: 80%;
+  }
+
+  &__title {
+    padding: 2rem 0 3rem 0;
+  }
+
+  &__description {
+    margin-bottom: 3rem;
+
+    p {
+      padding-bottom: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  &__subtitle {
+
+    &--container {
+      display: flex;
+      color: $color-secondary;
+    }
+
+    &--item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-primary-dark;
+
+      &:first-child > h2 {
+        margin-left: auto;
+        font-size: 3.5rem;
+      }
+
+      // Restrict the size of the margin around
+      // the icon... remove this for smaller screens
+      // so the margin can decrease. Is there a better way
+      // to do this?
+      &:nth-child(2) {
+        flex-grow: 0;
+        color: $color-secondary;
+      }
+
+      &:last-child > h2 {
+        margin-right: auto;
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  &__worldly-icon {
+    height: 10rem;
+    width: 10rem;
+    margin: 0 3.5rem;
+  }
 }

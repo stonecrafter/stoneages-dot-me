@@ -8,19 +8,23 @@
   height: 100vh;
 
   &__arrow {
-    background: url('../images/icons/downArrow.svg');
-    background-size: 5rem 5rem;
-    height: 5rem;
-    width: 5rem;
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    cursor: pointer;
-    transform: translateX(-50%);
-    transition: transform 0.2s ease;
-
     &:hover {
-      transform: translate(-50%, -1rem);
+      color: $color-primary-dark;
+    }
+
+    svg {
+      height: 5rem;
+      width: 5rem;
+      position: absolute;
+      bottom: 12%;
+      left: 50%;
+      cursor: pointer;
+      transform: translateX(-50%);
+      transition: transform 0.2s ease;
+  
+      &:hover {
+        transform: translate(-50%, -1rem);
+      }
     }
   }
 

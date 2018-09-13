@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Typing from 'react-typing-animation';
-
+import DownArrow from './icons/DownArrow';
 /**
  * Intro section: animated interactive fun using pixi.js
  */
@@ -52,7 +52,9 @@ class Intro extends Component {
             <h2>front end developer</h2>
           </Typing>
         </div>
-        <AnchorLink offset="50" href="#about" className="intro__arrow"></AnchorLink>
+        <AnchorLink offset="50" href="#about" className="intro__arrow">
+          <DownArrow />
+        </AnchorLink>
       </div> 
     );
   }
