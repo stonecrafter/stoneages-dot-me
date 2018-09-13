@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Zoom from 'react-reveal/Zoom';
 import _ from 'lodash';
 import { ComposableMap, ZoomableGroup, Geographies, Geography } from 'react-simple-maps';
+import tooltip from 'wsdm-tooltip';
 
 import worldMapObject from './static/world-50m.json';
 
@@ -11,6 +12,43 @@ class WorldMap extends Component {
 
     this.countriesLived = ['CAN', 'USA', 'AUS', 'CHN'];
     this.countriesVisited = ['FRA', 'MEX', 'SWE', 'NOR', 'ISL', 'DNK'];
+  }
+
+  /**
+   * Initialise the tooltip
+   */
+  componentDidMount = () => {
+    // Styles for the tooltip arrow are defined in base
+    this.tip = tooltip({
+      styles: {
+        color: '#20032b',
+        padding: '.5rem 1rem',
+        display: 'none',
+        'border-radius': '.3rem',
+        'background-color': '#baa5c1',
+        'z-index': 1000,
+        'box-shadow': '0 .2rem .8rem #20032b',
+        'text-align': 'center',
+        'pointer-events': 'none',
+        'font-size': '1.2rem'
+      }
+    });
+    this.tip.create();
+  }
+
+  handleMouseMove = (geography, evt) => {
+    if (this.isImportantCountry(geography.id)) {
+      this.tip.show(`
+        <div class="tooltip-inner">
+          ${geography.properties.name}
+        </div>
+      `);
+      this.tip.position({ pageX: evt.pageX, pageY: evt.pageY });
+    }
+  }
+
+  handleMouseLeave = () => {
+    this.tip.hide();
   }
 
   /**
@@ -32,7 +70,7 @@ class WorldMap extends Component {
    * I'll come up with a better name later....
    */
   isImportantCountry = (countryCode) => {
-    return this.isCountryLived() || this.isCountryVisited();
+    return this.isCountryLived(countryCode) || this.isCountryVisited(countryCode);
   }
 
   /**
@@ -76,6 +114,8 @@ class WorldMap extends Component {
                     cacheId={ `geography-${i}` }
                     geography={ geography }
                     projection={ projection }
+                    onMouseMove={ this.handleMouseMove }
+                    onMouseLeave={ this.handleMouseLeave }
                     style={{
                       // Colour behaviour should be the same for all 3 states
                       default: {
