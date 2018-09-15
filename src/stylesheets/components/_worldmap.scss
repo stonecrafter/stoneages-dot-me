@@ -1,3 +1,41 @@
 .world-map {
   margin: 5rem auto;
+
+  &__legend {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+
+    & > * {
+      display: flex;
+      align-items: center;
+    }
+
+    // Shared between all legend spans
+    span {
+      display: inline-block;
+      height: 1.4rem;
+      width: 1.4rem;
+      margin-right: .8rem;
+    }
+
+    // Specific legend indicator colours
+    &--cities {
+      span {
+        background-color: $color-cities;
+      }
+    }
+
+    &--lived {
+      span {
+        background-color: $color-countries-lived;
+      }
+    }
+
+    &--visited {
+      span {
+        background-color: $color-countries-visited;
+      }
+    }
+  }
 }
