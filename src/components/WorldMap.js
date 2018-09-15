@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import _ from 'lodash';
 import { ComposableMap, ZoomableGroup, Geographies, Geography, Markers, Marker } from 'react-simple-maps';
 import tooltip from 'wsdm-tooltip';
@@ -187,20 +188,22 @@ class WorldMap extends Component {
           </ComposableMap>
         </Zoom>
 
-        <div className="world-map__legend">
-          <div className="world-map__legend--cities">
-            <span></span>
-            <label>cities lived</label>
+        <Fade bottom>
+          <div className="world-map__legend">
+            <div className="world-map__legend--cities">
+              <span></span>
+              <label>cities lived</label>
+            </div>
+            <div className="world-map__legend--visited">
+              <span></span>
+              <label>countries visited</label>
+            </div>
+            <div className="world-map__legend--lived">
+              <span></span>
+              <label>countries lived</label>
+            </div>
           </div>
-          <div className="world-map__legend--visited">
-            <span></span>
-            <label>countries visited</label>
-          </div>
-          <div className="world-map__legend--lived">
-            <span></span>
-            <label>countries lived</label>
-          </div>
-        </div>
+        </Fade>
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Typing from 'react-typing-animation';
 import DownArrow from './icons/DownArrow';
+
 /**
  * Intro section: animated interactive fun using pixi.js
  */
