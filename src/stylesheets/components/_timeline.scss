@@ -1,7 +1,7 @@
 .timeline {
-  height: 1000px;
-  background: linear-gradient(180deg, $color-background-secondary 0%, #c8b461 100%);
+  background: linear-gradient(180deg, $color-background-secondary 0%, $color-background-tertiary 100%);
   text-align: center;
+  padding-bottom: 3rem;
 
   > * {
     margin: auto;
@@ -10,5 +10,91 @@
 
   &__title {
     padding: 10rem 0 3rem 0;
+  }
+  
+  // Overwrite library styles, yay
+  .vertical-timeline {
+    margin-top: 0;
+    font-size: 1.5rem !important;
+
+    // This is where the media queries for the library is set
+    @media only screen and (max-width: 1170px) {
+      width: 85%
+    }
+
+    &:before {
+      background: $color-primary-dark;
+    }
+
+    &-element {
+      &:last-of-type {
+        .vertical-timeline-element-content {
+          display: none;
+        }
+      }
+
+      &-content {
+        background-color: $color-timeline;
+        box-shadow: 0 .1rem 0 .1rem rgba(0,0,0,.08);
+        border: .2rem solid $color-primary-dark;
+
+        .vertical-timeline-element-date {
+          font-size: $timeline-font-size;
+  
+          @media only screen and (max-width: 1170px) {
+            font-size: $s-size;
+            padding: .4rem 0;
+            float: none;
+            font-weight: 700;
+          }
+        }
+
+        p {
+          // Can't be bothered to mess with specificities.
+          font-size: $timeline-font-size !important;
+          margin: 0;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+
+      &-icon {
+        box-shadow: 0 0 0 .4rem $color-primary-dark, inset 0 .2rem 0 rgba(0,0,0,.08), 0 .3rem 0 .4rem rgba(0,0,0,.05);
+        width: 4rem;
+        height: 4rem;
+        margin-left: -2rem;
+        margin-top: 1rem;
+
+        @media only screen and (max-width: 1170px) {
+          margin-left: 0;
+          margin-top: .5rem;
+        }
+      }
+
+      &--left {
+        .vertical-timeline-element-date {
+          text-align: left;
+        }
+
+        .vertical-timeline-element-content::before {
+          border-left-color: $color-primary-dark !important;
+        }
+
+        @media only screen and (max-width: 1170px) {
+          .vertical-timeline-element-content::before {
+            border-right-color: $color-primary-dark !important;
+            border-left-color: transparent !important;
+          }
+        }
+      }
+
+      &--right {
+        .vertical-timeline-element-content::before {
+          border-right-color: $color-primary-dark !important;
+        }
+      }
+    }
   }
 }

@@ -105,7 +105,7 @@ class WorldMap extends Component {
     if (this.isCountryLived(countryCode)) {
       colour = '#3A024E';
     } else if (this.isCountryVisited(countryCode)) {
-      colour = '#5B0E77';
+      colour = '#6E2F85';
     }
 
     return colour;

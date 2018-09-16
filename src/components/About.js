@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
-import Worldly from './icons/Worldly';
+import WorldlyIcon from './icons/WorldlyIcon';
 import WorldMap from './WorldMap';
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <section id="about" className="about">
@@ -38,7 +34,7 @@ class About extends Component {
         </div>
         <div className="about__subtitle--container">
           <Fade left><div className="about__subtitle--item"><h2>global</h2></div></Fade>
-          <Zoom><div className="about__subtitle--item"><Worldly className="about__worldly-icon" /></div></Zoom>
+          <Zoom><div className="about__subtitle--item"><WorldlyIcon className="about__worldly-icon" /></div></Zoom>
           <Fade right><div className="about__subtitle--item"><h2>footprint</h2></div></Fade>
         </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DownArrow = props => (
+const DownArrowIcon = props => (
   <svg
     fill="currentColor"
     viewBox="0 0 50800 50800"
@@ -25,4 +25,4 @@ const DownArrow = props => (
   </svg>
 );
 
-export default DownArrow;
+export default DownArrowIcon;

@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <header className="header">

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Worldly = props => (
+const WorldlyIcon = props => (
   <svg
     fill="currentColor"
     viewBox="0 0 100 100"
@@ -13,4 +13,4 @@ const Worldly = props => (
   </svg>
 );
 
-export default Worldly;
+export default WorldlyIcon;

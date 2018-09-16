@@ -6,18 +6,24 @@ $color-secondary: #4C5100;
 
 $color-background-primary: #c8c561;
 $color-background-secondary: #E7F5C1;
+$color-background-tertiary: #c8b461;
 
 $color-background-tooltip: #baa5c1;
 
 $color-cities: #FB97C6;
 $color-countries-lived: #3A024E;
-$color-countries-visited: #5B0E77;
+$color-countries-visited: #6E2F85;
+
+$color-timeline: #E2EC9A;
 
 // Spacing
 $s-size: 1.2rem;
 $m-size: 1.6rem;
 $l-size: 3.2rem;
 $xl-size: 4.8rem;
+
+// Font sizes
+$timeline-font-size: 1.5rem;
 
 // Breakpoints
 $desktop-breakpoint: 45rem;
