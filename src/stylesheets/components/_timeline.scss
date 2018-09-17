@@ -1,12 +1,8 @@
 .timeline {
   background: linear-gradient(180deg, $color-background-secondary 0%, $color-background-tertiary 100%);
-  text-align: center;
   padding-bottom: 3rem;
 
-  > * {
-    margin: auto;
-    width: 80%;
-  }
+  @include centerLayout;
 
   &__title {
     padding: 10rem 0 3rem 0;

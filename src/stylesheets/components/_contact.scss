@@ -1,3 +1,7 @@
 .contact {
-  
+  padding-top: 6rem;
+  background: linear-gradient(180deg, $color-background-tertiary 0%, $color-background-final 100%);
+  height: 700px;
+
+  @include centerLayout;
 }

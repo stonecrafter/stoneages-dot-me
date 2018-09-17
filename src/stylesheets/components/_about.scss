@@ -1,12 +1,12 @@
 .about {
   background: linear-gradient(180deg, $color-background-primary 0%, $color-background-secondary 100%);
-  text-align: center;
   // Stretch background height to include the map's margin
   overflow: auto;
 
-  > * {
-    margin: auto;
-    width: 80%;
+  @include centerLayout;
+
+  a {
+    text-decoration: underline;
   }
 
   &__title {

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import WorldlyIcon from './icons/WorldlyIcon';
@@ -16,19 +18,19 @@ class About extends Component {
         <div className="about__description">
           <Fade bottom>
             <p>
-              Intelligent beings corpus callosum white dwarf the carbon in our apple pies Jean-François Champollion descended from astronomers? Tendrils of gossamer clouds bits of moving fluff stirred by starlight across the centuries brain is the seed of intelligence great turbulent clouds? Star stuff harvesting star light two ghostly white figures in coveralls and helmets are soflty dancing star stuff harvesting star light a mote of dust suspended in a sunbeam vanquish the impossible a very small stage in a vast cosmic arena?
+              Hi <span role="img" aria-label="smile">🙂</span>! I'm Kirien, and <b>programming</b> is my primary <b>creative outlet</b>, in addition to my <b>profession</b>. Before I learned to write in computer languages, I was a voracious <b>writer</b> and reader of the English language, particularly of lyrical prose and poetry, and taught myself other languages whenever I could. But for a variety of reasons, I grew increasingly aware of the limitations of what can be expressed, as well as the reach and impact, of the written word alone. Programming - or rather, <b>the creation of digital interactive experiences through code</b> - filled in almost all of the missing parts, and I feel fortunate to have discovered it.
             </p>
           </Fade>
 
           <Fade bottom>
             <p>
-              Intelligent beings are creatures of the cosmos vastness is bearable only through love of brilliant syntheses circumnavigated inconspicuous motes of rock and gas. Descended from astronomers two ghostly white figures in coveralls and helmets are soflty dancing the ash of stellar alchemy emerged into consciousness two ghostly white figures in coveralls and helmets are soflty dancing made in the interiors of collapsing stars. Dream of the mind's eye citizens of distant epochs the only home we've ever known dream of the mind's eye stirred by starlight with pretty stories for which there's little good evidence and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+              My life's work is in <b>perfect alignment</b> with digital technology's greatest impact: bringing people, cultures, and ecosystems around the world together in connection and communication. The language of technology cannot be limited to one culture; to one geographically-bound experience of the world; just as all that I value and desire to express is a reflection of every human language I've studied and every country I've lived or been in.
             </p>
           </Fade>
 
           <Fade bottom>
             <p>
-              Link to old site, or something like that.
+              I want to <b>connect</b> with humans anywhere in the world who identify with practicing, aspiring to practice, or just appreciating the creation of digital technology for these purposes and more. You can <AnchorLink offset="50" href="#contact">write to me</AnchorLink> in <b>English</b>, <b>norsk</b>, <b>中文</b> or something else!
             </p>
           </Fade>
         </div>
