@@ -6,3 +6,22 @@
     width: 80%;
   }
 }
+
+@mixin inputConfigs {
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  border: 1px solid $color-secondary;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
+
+  &:focus {
+    border: 1px solid $color-secondary;
+    box-shadow: 0 0 .5rem $color-secondary;
+
+    & ~ .contact__form--label {
+      margin-top: -2rem;
+    }
+  }
+}
