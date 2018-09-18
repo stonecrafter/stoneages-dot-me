@@ -27,6 +27,10 @@
       grid-column-end: span 2;
       position: relative;
 
+      @media only screen and (max-width: $m-phone-bkp) {
+        grid-column-end: span 4;
+      }
+
       input {
         height: 4rem;
         padding: 0 1rem;
@@ -61,6 +65,16 @@
 
       &:hover {
         background-color: lighten($color-secondary, 5%);
+      }
+
+      @media only screen and (max-width: $m-phone-bkp) {
+        grid-column-start: 3;
+        grid-column-end: span 2;
+      }
+
+      @media only screen and (max-width: $sm-phone-bkp) {
+        grid-column-start: 1;
+        grid-column-end: span 4;
       }
     }
   }

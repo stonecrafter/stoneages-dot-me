@@ -21,6 +21,16 @@
     height: 5rem;
     align-items: center;
     margin: auto;
+
+    @media only screen and (max-width: $sm-phone-bkp) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__title {
+    @media only screen and (max-width: $sm-phone-bkp) {
+      display: none;
+    }
   }
 
   &__nav {

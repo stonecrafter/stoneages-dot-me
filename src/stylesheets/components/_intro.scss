@@ -1,8 +1,12 @@
 .intro {
-  background: url('../images/hero.jpg') no-repeat center center;
-  background-size: cover;
-  background-color: $color-primary-light;
-  background-blend-mode: difference;
+  background-color: $color-background-primary;
+
+  @supports (background-blend-mode: difference) {
+    background: url('../images/hero.jpg') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: difference;
+    background-color: $color-primary-light;
+  }
 
   width: 100vw;
   height: 100vh;
@@ -38,6 +42,10 @@
     h1 {
       cursor: default;
       letter-spacing: 2rem;
+
+      @media only screen and (max-width: $m-phone-bkp) {
+        letter-spacing: 1rem;
+      }
 
       span {
         &:hover {

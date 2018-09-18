@@ -39,6 +39,10 @@
       &:first-child > h2 {
         margin-left: auto;
         font-size: 3.5rem;
+
+        @media only screen and (max-width: $sm-phone-bkp) {
+          margin-left: unset;
+        }
       }
 
       // Restrict the size of the margin around
@@ -48,6 +52,14 @@
       &:nth-child(2) {
         flex-grow: 0;
         color: $color-secondary;
+
+        // I can't think of a better way to handle this icon so just removing it
+        // for extra small screens
+        @media only screen and (max-width: $sm-phone-bkp) {
+          svg {
+            display: none;
+          }
+        }
       }
 
       &:last-child > h2 {

@@ -24,7 +24,7 @@ class About extends Component {
 
           <Fade bottom>
             <p>
-              My life's work is in <b>perfect alignment</b> with digital technology's greatest impact: bringing people, cultures, and ecosystems around the world together in connection and communication. The language of technology cannot be limited to one culture; to one geographically-bound experience of the world; just as all that I value and desire to express is a reflection of every human language I've studied and every country I've lived or been in.
+              My <b>life's work</b> is in perfect alignment with digital technology's greatest impact: bringing people, cultures, and ecosystems around the world together in connection and communication. The language of technology cannot be limited to one culture; to one geographically-bound experience of the world; just as all that I value and desire to express is a reflection of every human language I've studied and every country I've lived or been in.
             </p>
           </Fade>
 
