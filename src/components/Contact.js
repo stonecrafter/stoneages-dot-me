@@ -42,9 +42,9 @@ class Contact extends Component {
 
         <Zoom>
           <div className="contact__icons">
-            <a href="https://github.com/stonecrafter" target="_blank" rel="noopener noreferrer"><GithubIcon transform="scale(3)"/></a>
-            <a href="https://www.linkedin.com/in/stonecrafter" target="_blank" rel="noopener noreferrer"><LinkedinIcon transform="scale(3)"/></a>
-            <a href="https://codepen.io/stonecrafter" target="_blank" rel="noopener noreferrer"><CodepenIcon transform="scale(3)"/></a>
+            <a href="https://github.com/stonecrafter" target="_blank" rel="noopener noreferrer"><GithubIcon transform="translate(-14, 15) scale(3)"/></a>
+            <a href="https://www.linkedin.com/in/stonecrafter" target="_blank" rel="noopener noreferrer"><LinkedinIcon transform="translate(-14, 15) scale(3)"/></a>
+            <a href="https://codepen.io/stonecrafter" target="_blank" rel="noopener noreferrer"><CodepenIcon transform="translate(-14, 15) scale(3)"/></a>
           </div>
         </Zoom>
       </section>

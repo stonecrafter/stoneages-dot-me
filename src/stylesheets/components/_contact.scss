@@ -74,5 +74,15 @@
         cursor: pointer;
       }
     }
+
+    a {
+      // Make the link cover up the entire svg
+      // Not sure if using rems work here, look into it later
+      display: inline-block;
+      height: 48px;
+      width: 48px;
+      vertical-align: middle;
+      margin: 0 1.5rem;
+    }
   }
 }
