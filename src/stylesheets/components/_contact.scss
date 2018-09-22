@@ -55,6 +55,28 @@
       }
     }
 
+    &--result {
+      grid-column-end: span 3;
+      grid-row-start: 3;
+      align-self: center;
+      font-size: 1.4rem;
+
+      &.true {
+        color: green;
+      }
+
+      &.false {
+        color: red;
+      }
+
+      @media only screen and (max-width: $m-phone-bkp) {
+        grid-row-start: 5;
+        grid-column-end: span 4;
+        margin: 1rem 2rem;
+        height: 6rem;
+      }
+    }
+
     &--submit {
       grid-column-start: 4;
       height: 4rem;
@@ -65,6 +87,11 @@
 
       &:hover {
         background-color: lighten($color-secondary, 5%);
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        background-color: lighten($color-secondary, 15%);
       }
 
       @media only screen and (max-width: $m-phone-bkp) {
