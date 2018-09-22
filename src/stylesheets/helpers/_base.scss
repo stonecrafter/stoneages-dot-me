@@ -26,6 +26,11 @@ select {
   font-size: 1.5rem;
 }
 
+input:required,
+textarea:required {
+  box-shadow: none;
+}
+
 a {
   text-decoration: none;
   color: $color-primary-dark;

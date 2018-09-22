@@ -81,7 +81,8 @@
 
   &__icons {
     svg {
-      margin: 0 3rem;
+      height: 5rem;
+      width: 5rem;
 
       &:hover {
         color: lighten($color-primary-dark, 10%);

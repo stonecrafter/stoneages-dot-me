@@ -14,8 +14,8 @@ class Timeline extends Component {
     return (
       <section className="timeline">
         <Fade bottom>
-          <div className="timeline__title">
-            <h1 id="timeline">timeline</h1>
+          <div className="timeline__title" id="timeline">
+            <h1>timeline</h1>
           </div>
         </Fade>
 

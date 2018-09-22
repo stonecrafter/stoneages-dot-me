@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 
@@ -7,6 +8,26 @@ import LinkedinIcon from './icons/LinkedinIcon';
 import CodepenIcon from './icons/CodepenIcon';
 
 class Contact extends Component {
+
+  /**
+   * Submit the contact form
+   */
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    const user = {
+      name: this.state.name
+    };
+
+    axios.defaults.headers.post['Content-Type'] = 'application/json';
+
+    axios.post(`https://www.enformed.io/bpidqjmz/`, { user })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+  }
+
   render() {
     return (
       <section className="contact" id="contact">
@@ -17,7 +38,7 @@ class Contact extends Component {
         </Fade>
 
         <div className="contact__form">
-          <form action="https://formspree.io/stonewoodleaf@gmail.com" method="POST" autoComplete="off">
+          <form onSubmit={this.handleSubmit} autoComplete="off">
             <Fade left>
               <div className="contact__form--details">
                 <input type="text" name="name" id="nme" placeholder="Your Name" required />
@@ -36,15 +57,16 @@ class Contact extends Component {
                 <label htmlFor="msg" className="contact__form--label">Message</label>
               </div>
             </Fade>
+            <input type="hidden" name="*honeypot" />
             <Fade right><button type="submit" className="contact__form--submit">Send</button></Fade>
           </form>
         </div>
 
         <Zoom>
           <div className="contact__icons">
-            <a href="https://github.com/stonecrafter" target="_blank" rel="noopener noreferrer"><GithubIcon transform="translate(-14, 15) scale(3)"/></a>
-            <a href="https://www.linkedin.com/in/stonecrafter" target="_blank" rel="noopener noreferrer"><LinkedinIcon transform="translate(-14, 15) scale(3)"/></a>
-            <a href="https://codepen.io/stonecrafter" target="_blank" rel="noopener noreferrer"><CodepenIcon transform="translate(-14, 15) scale(3)"/></a>
+            <a href="https://github.com/stonecrafter" target="_blank" rel="noopener noreferrer"><GithubIcon /></a>
+            <a href="https://www.linkedin.com/in/stonecrafter" target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a>
+            <a href="https://codepen.io/stonecrafter" target="_blank" rel="noopener noreferrer"><CodepenIcon /></a>
           </div>
         </Zoom>
       </section>

@@ -5,6 +5,11 @@
     width: 95%;
   }
 
+  // Don't know why the inline style craps out on FF and Safari
+  .rsm-marker {
+    fill: $color-cities;
+  }
+
   &__legend {
     display: flex;
     justify-content: space-around;
