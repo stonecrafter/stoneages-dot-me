@@ -47,18 +47,28 @@ class Contact extends Component {
     this.setState({ submitting: true, submissionMessage: '', submissionSuccess: undefined });
     axios.post(`https://www.enformed.io/bpidqjmz/`, { name, email, message })
       .then(res => {
-        let submissionMessage, submissionSuccess;
+        let name, email, message, submissionMessage, submissionSuccess;
         // If the request failed, the status will still be 200 OK, but the URL will be /failure
         // A weird way to check, but it works...
         if (_.includes(res.request.responseURL, 'failure')) {
           submissionMessage = 'Uh oh, there was an error! Try one of the methods below to get in touch instead...';
           submissionSuccess = false;
+
+          // Don't reset input if failure
+          name = this.state.name;
+          email = this.state.email;
+          message = this.state.message;
         } else {
           submissionMessage = 'Sent! I will get back to you shortly...';
           submissionSuccess = true;
+
+          // Reset input if success
+          name = '';
+          email = '';
+          message = '';
         }
 
-        this.setState({ submitting: false, submissionMessage, submissionSuccess });
+        this.setState({ submitting: false, name, email, message, submissionMessage, submissionSuccess });
       })
   }
 
