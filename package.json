@@ -2,8 +2,10 @@
   "name": "stoneages-dot-me",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://stonecrafter.github.io/stoneages-dot-me",
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.0",
     "lodash": "^4.17.11",
     "node-sass-chokidar": "^1.3.3",
     "pixi.js": "^4.8.1",
@@ -18,6 +20,8 @@
     "wsdm-tooltip": "^0.1.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
