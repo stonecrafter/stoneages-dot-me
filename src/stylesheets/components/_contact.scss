@@ -107,6 +107,9 @@
   }
 
   &__icons {
+    display: flex;
+    justify-content: center;
+
     svg {
       height: 5rem;
       width: 5rem;
@@ -125,6 +128,14 @@
       width: 48px;
       vertical-align: middle;
       margin: 0 1.5rem;
+    }
+
+    @media only screen and (max-width: $sm-phone-bkp) {
+      display: inline-block;
+
+      &--top {
+        margin-bottom: 3rem;
+      }
     }
   }
 }

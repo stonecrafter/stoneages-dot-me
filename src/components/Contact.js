@@ -7,6 +7,7 @@ import Zoom from 'react-reveal/Zoom';
 import GithubIcon from './icons/GithubIcon';
 import LinkedinIcon from './icons/LinkedinIcon';
 import CodepenIcon from './icons/CodepenIcon';
+import MediumIcon from './icons/MediumIcon';
 
 class Contact extends Component {
   constructor() {
@@ -106,9 +107,14 @@ class Contact extends Component {
 
         <Zoom>
           <div className="contact__icons">
-            <a href="https://github.com/stonecrafter" target="_blank" rel="noopener noreferrer"><GithubIcon /></a>
-            <a href="https://www.linkedin.com/in/stonecrafter" target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a>
-            <a href="https://codepen.io/stonecrafter" target="_blank" rel="noopener noreferrer"><CodepenIcon /></a>
+            <div className="contact__icons--top">
+              <a href="https://github.com/stonecrafter" target="_blank" rel="noopener noreferrer"><GithubIcon /></a>
+              <a href="https://medium.com/@kirien.eyma" target="_blank" rel="noopener noreferrer"><MediumIcon /></a>
+            </div>
+            <div className="contact__icons--bottom">
+              <a href="https://www.linkedin.com/in/stonecrafter" target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a>
+              <a href="https://codepen.io/stonecrafter" target="_blank" rel="noopener noreferrer"><CodepenIcon /></a>
+            </div>
           </div>
         </Zoom>
       </section>
