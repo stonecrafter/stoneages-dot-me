@@ -3,9 +3,6 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Typing from 'react-typing-animation';
 import DownArrowIcon from './icons/DownArrowIcon';
 
-/**
- * Intro section: animated interactive fun using pixi.js
- */
 class Intro extends Component {
   constructor(props) {
     super(props);
