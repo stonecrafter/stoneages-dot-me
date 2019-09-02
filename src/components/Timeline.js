@@ -88,7 +88,7 @@ class Timeline extends Component {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2015 - Present"
+            date="2015 - 2018"
             position="left"
             iconStyle={{ background: '#2A2400', color: '#fff' }}
             icon={<WorkIcon />}
@@ -106,6 +106,17 @@ class Timeline extends Component {
           >
             <p>
               To express my love for learning (human) languages, I built a <b>React</b> app called <a href="https://stonecrafter.github.io/world-language-comparator/" target="_blank" rel="noopener noreferrer">World Language Comparator</a> to improve the [aspiring-] polyglot experience with a user interface for automatically translating from one to many target languages simultaneously and in the same view. Let me know how it can be made better!
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="2019 - Present"
+            position="left"
+            iconStyle={{ background: '#2A2400', color: '#fff' }}
+            icon={<WorkIcon />}
+          >
+            <p>
+              I started work with the applications development group at <b>Cognite AS</b> in Oslo, building <b>React</b> apps with <b>styled components</b> and writing a lot of <b>end-to-end tests</b>. It's fun deep-diving into a whole new tech stack, and quality is even more crucial for our target customers in the heavy asset industry!
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement

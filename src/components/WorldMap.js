@@ -11,15 +11,16 @@ class WorldMap extends Component {
   constructor(props) {
     super(props);
 
-    this.countriesLived = ['CAN', 'USA', 'AUS', 'CHN'];
-    this.countriesVisited = ['FRA', 'MEX', 'SWE', 'NOR', 'ISL', 'DNK'];
+    this.countriesLived = ['CAN', 'USA', 'AUS', 'CHN', 'NOR'];
+    this.countriesVisited = ['FRA', 'MEX', 'SWE', 'FIN', 'ISL', 'DNK', 'NLD', 'GBR'];
     this.citiesLived = [
       { name: 'Vancouver', coordinates: [-123.120735, 49.282730] },
       { name: 'Toronto', coordinates: [-79.383186, 43.653225] },
       { name: 'Sydney', coordinates: [151.205338, -33.872761] },
       { name: 'Beijing', coordinates: [116.386340, 39.930840] },
       { name: 'San Francisco', coordinates: [-122.419418, 37.774929] },
-      { name: 'Portland', coordinates: [-122.681430, 45.516020] }
+      { name: 'Portland', coordinates: [-122.681430, 45.516020] },
+      { name: 'Oslo', coordinates: [10.757933, 59.911491] }
     ];
   }
 
