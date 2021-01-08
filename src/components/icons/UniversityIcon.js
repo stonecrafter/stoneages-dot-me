@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const UniversityIcon = props => (
+const UniversityIcon = (props) => (
   <svg
     fill="currentColor"
     viewBox="0 0 100 100"

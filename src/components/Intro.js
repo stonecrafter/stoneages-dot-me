@@ -15,7 +15,7 @@ class Intro extends Component {
    */
   onFinishedTyping = () => {
     this.setState({ typingFinished: true });
-  }
+  };
 
   /**
    * Render react element
@@ -24,7 +24,11 @@ class Intro extends Component {
     return (
       <div id="top" className="intro">
         <div className="intro__title">
-          <Typing speed={75} startDelay={375} onFinishedTyping={this.onFinishedTyping}>
+          <Typing
+            speed={75}
+            startDelay={375}
+            onFinishedTyping={this.onFinishedTyping}
+          >
             <h1>
               <span>k</span>
               <span>i</span>
@@ -38,22 +42,21 @@ class Intro extends Component {
               <span>m</span>
               <span>a</span>
             </h1>
-              {
-                !this.state.typingFinished &&
-                <div className="intro__title--temp">
-                  <h2>writer</h2>
-                  <Typing.Reset count={1} delay={500} />
-                  <h2>global citizen</h2>
-                  <Typing.Reset count={1} delay={500} />
-                </div>
-              }
+            {!this.state.typingFinished && (
+              <div className="intro__title--temp">
+                <h2>writer</h2>
+                <Typing.Reset count={1} delay={500} />
+                <h2>global citizen</h2>
+                <Typing.Reset count={1} delay={500} />
+              </div>
+            )}
             <h2>front end developer</h2>
           </Typing>
         </div>
         <AnchorLink offset="50" href="#about" className="intro__arrow">
           <DownArrowIcon />
         </AnchorLink>
-      </div> 
+      </div>
     );
   }
 }

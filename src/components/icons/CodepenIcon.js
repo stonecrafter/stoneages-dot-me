@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const CodepenIcon = props => (
+const CodepenIcon = (props) => (
   <svg
     aria-labelledby="codepen-icon"
     fill="currentColor"

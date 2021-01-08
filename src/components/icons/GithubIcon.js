@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const GithubIcon = props => (
+const GithubIcon = (props) => (
   <svg
     aria-labelledby="github-icon"
     fill="currentColor"

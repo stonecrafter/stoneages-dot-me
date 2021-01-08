@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const LinkedinIcon = props => (
+const LinkedinIcon = (props) => (
   <svg
     aria-labelledby="linkedin-icon"
     fill="currentColor"

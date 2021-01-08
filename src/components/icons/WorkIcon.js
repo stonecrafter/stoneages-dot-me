@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const WorkIcon = props => (
+const WorkIcon = (props) => (
   <svg
     fill="currentColor"
     data-name="Layer 1"

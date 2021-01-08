@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WorldlyIcon = props => (
+const WorldlyIcon = (props) => (
   <svg
     fill="currentColor"
     viewBox="0 0 100 100"
