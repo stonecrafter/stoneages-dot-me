@@ -12,10 +12,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install and Build 🔧
+      - name: Install, Build and Deploy 🚀
         run: |
           npm install
-          npm run-script predeploy
-
-      - name: Deploy 🚀
-        run: npm deploy
+          npm run-script deploy
