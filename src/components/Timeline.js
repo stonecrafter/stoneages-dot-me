@@ -139,9 +139,9 @@ const Timeline = () => (
         icon={<UniversityIcon />}
       >
         <p>
-          I graduated from the <b>University of Toronto</b> with an{' '}
-          <b>HBSc in Computer Science</b>. My senior project was an academic
-          literature review titled{' '}
+          I graduated from the <b>University of Toronto</b> with a{' '}
+          <b>Bachelor of Science in Computer Science</b>. My bachelor project
+          was an academic literature review titled{' '}
           <a
             href="https://www.academia.edu/37417981/Cross-cultural_perspectives_on_enrollment_persistence_and_diversity_in_computer_science_undergraduate_programs"
             target="_blank"
@@ -150,8 +150,8 @@ const Timeline = () => (
             Cross-cultural perspectives on enrollment, persistence, and
             diversity in computer science undergraduate programs
           </a>
-          . It was a formalised exploration of some questions that had persisted
-          in my brain throughout the course of my studies.
+          . It was a formalised exploration of some questions that had been
+          feeling alive inside of me throughout the course of my studies.
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -163,11 +163,10 @@ const Timeline = () => (
       >
         <p>
           Returning to <b>Marin Software</b> as a full-time{' '}
-          <b>software engineer</b>, I joined the front-end team and have been
-          working on a variety of features in <b>AngularJS</b> and <b>NodeJS</b>{' '}
-          ever since. I've had the opportunity to lead projects both solo and in
-          smaller teams, and frequently collaborate with colleagues across 4
-          regions of the world.
+          <b>software engineer</b>, I joined the front-end team and worked on a
+          variety of features in <b>AngularJS</b> and <b>NodeJS</b>. I had the
+          opportunity to lead projects both solo and in smaller teams, and
+          frequently collaborate with colleagues across 4 regions of the world.
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
@@ -202,10 +201,11 @@ const Timeline = () => (
       >
         <p>
           I started work with the applications development group at{' '}
-          <b>Cognite AS</b> in Oslo, building <b>React</b> apps with{' '}
-          <b>styled components</b> and writing a lot of <b>end-to-end tests</b>.
-          It's fun deep-diving into a whole new tech stack, and quality is even
-          more crucial for our target customers in the heavy asset industry!
+          <b>Cognite AS</b> in Oslo, building mobile-friendly <b>React</b> apps
+          with <b>Redux</b>, <b>styled components</b> and writing a lot of{' '}
+          <b>Jest</b> and <b>TestCafe tests</b>. It's been an amazing journey of
+          growth getting acquainted with a new tech stack, business domain,
+          company culture, and of course - a new country to call home 🇳🇴
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement

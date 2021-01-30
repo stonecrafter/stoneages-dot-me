@@ -62,7 +62,7 @@ const About = () => (
 
       <Fade bottom>
         <p>
-          My creative process as a technologist are grounded in active study and
+          My creative process as a technologist is grounded in active study and
           reflection of topics broadly falling into the realms of geography,
           history, anthropology, ecology and ecospirituality. I read a lot,
           write sometimes, and spend an above average amount of time in the
