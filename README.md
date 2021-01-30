@@ -4,4 +4,4 @@ This is my personal homepage. It was bootstraped with `create-react-app` in 2018
 
 Regarding contents and presentation of information: the "story" section has been updated to something that feels genuine and authentic as of this point in time. The rest feels like it could be revamped entirely / structurally, but in the absence of ideas of what to replace it with, it will just remain as it is.
 
-- Jan 2021
+~ Jan 2021
