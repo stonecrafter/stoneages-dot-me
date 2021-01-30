@@ -6,7 +6,6 @@ import Zoom from 'react-reveal/Zoom';
 
 import GithubIcon from './icons/GithubIcon';
 import LinkedinIcon from './icons/LinkedinIcon';
-import CodepenIcon from './icons/CodepenIcon';
 import MediumIcon from './icons/MediumIcon';
 
 class Contact extends Component {
@@ -194,13 +193,6 @@ class Contact extends Component {
                 rel="noopener noreferrer"
               >
                 <LinkedinIcon />
-              </a>
-              <a
-                href="https://codepen.io/stonecrafter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <CodepenIcon />
               </a>
             </div>
           </div>
