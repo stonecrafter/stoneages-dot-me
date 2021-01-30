@@ -179,7 +179,7 @@ class Contact extends Component {
                 <GithubIcon />
               </a>
               <a
-                href="https://medium.com/@kirien.eyma"
+                href="https://stonecrafter.medium.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
