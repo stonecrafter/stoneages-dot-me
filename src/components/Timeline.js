@@ -170,32 +170,9 @@ const Timeline = () => (
         </p>
       </VerticalTimelineElement>
       <VerticalTimelineElement
-        className="vertical-timeline-element--project"
-        date="2018"
-        position="right"
-        iconStyle={{ background: '#2A2400', color: '#fff' }}
-        icon={<PaintbrushIcon />}
-      >
-        <p>
-          To express my love for learning (human) languages, I built a{' '}
-          <b>React</b> app called{' '}
-          <a
-            href="https://stonecrafter.github.io/world-language-comparator/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            World Language Comparator
-          </a>{' '}
-          to improve the [aspiring-] polyglot experience with a user interface
-          for automatically translating from one to many target languages
-          simultaneously and in the same view. Let me know how it can be made
-          better!
-        </p>
-      </VerticalTimelineElement>
-      <VerticalTimelineElement
         className="vertical-timeline-element--work"
         date="2019 - Present"
-        position="left"
+        position="right"
         iconStyle={{ background: '#2A2400', color: '#fff' }}
         icon={<WorkIcon />}
       >
